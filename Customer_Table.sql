@@ -30,3 +30,11 @@ Update Customer_Table set  phone='93564218' where Name = 'A'
 Update Customer_Table set  Address='5235' where Name ='B'
 --UC6
 SELECT COUNT(*) AS India FROM  Customer_Table where Country = 'India'
+SELECT COUNT(*) AS US FROM  Customer_Table where Country = 'US'
+SELECT COUNT(*) AS Japan FROM  Customer_Table where Country = 'Japan'
+SELECT COUNT(*) AS Germany FROM  Customer_Table where Country = 'Germany'
+--UC6
+SELECT AVG(Salary) as AVG from Customer_Table
+SELECT MIN(Salary) as MIN_Salary from Customer_Table
+SELECT MAX(Salary) as MAX_Salary from Customer_Table
+SELECT Sum(Salary) as TOTAL_Salary from Customer_Table
