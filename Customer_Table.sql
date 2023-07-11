@@ -28,3 +28,5 @@ Update Customer_Table set  Country='Germany',Salary = 200000,Pincode =74562 wher
 --UC5
 Update Customer_Table set  phone='93564218' where Name = 'A'
 Update Customer_Table set  Address='5235' where Name ='B'
+--UC6
+SELECT COUNT(*) AS India FROM  Customer_Table where Country = 'India'
