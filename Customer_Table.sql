@@ -53,4 +53,5 @@ Insert into ORDER_Table(Product_Name,Quantity,Rating) values('P',4,4)
 Insert into ORDER_Table(Product_Name,Quantity,Rating) values('Q',3,1)
 Insert into ORDER_Table(Product_Name,Quantity,Rating) values('R',5,5)
 Insert into ORDER_Table(Product_Name,Quantity,Rating) values('S',5,3)
+--UC9
 select *from ORDER_Table
