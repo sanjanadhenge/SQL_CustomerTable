@@ -38,3 +38,19 @@ SELECT AVG(Salary) as AVG from Customer_Table
 SELECT MIN(Salary) as MIN_Salary from Customer_Table
 SELECT MAX(Salary) as MAX_Salary from Customer_Table
 SELECT Sum(Salary) as TOTAL_Salary from Customer_Table
+--UC8
+create table ORDER_Table(
+Product_ID int Primary Key identity(1,1) ,
+Product_Name varchar(20),
+Quantity Bigint,
+Rating int
+)
+Insert into ORDER_Table(Product_Name,Quantity,Rating) values('L',5,4)
+Insert into ORDER_Table(Product_Name,Quantity,Rating) values('M',4,5)
+Insert into ORDER_Table(Product_Name,Quantity,Rating) values('N',5,5)
+Insert into ORDER_Table(Product_Name,Quantity,Rating) values('O',3,2)
+Insert into ORDER_Table(Product_Name,Quantity,Rating) values('P',4,4)
+Insert into ORDER_Table(Product_Name,Quantity,Rating) values('Q',3,1)
+Insert into ORDER_Table(Product_Name,Quantity,Rating) values('R',5,5)
+Insert into ORDER_Table(Product_Name,Quantity,Rating) values('S',5,3)
+select *from ORDER_Table
