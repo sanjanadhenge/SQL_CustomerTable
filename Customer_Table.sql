@@ -25,3 +25,6 @@ Update Customer_Table set  Country='Canada',Salary = 900000,Pincode =85123 where
 Update Customer_Table set  Country='India',Salary = 350000,Pincode =414512 where ID=5
 Update Customer_Table set  Country='Japan',Salary = 500000,Pincode =98623 where ID=6
 Update Customer_Table set  Country='Germany',Salary = 200000,Pincode =74562 where ID=7
+--UC5
+Update Customer_Table set  phone='93564218' where Name = 'A'
+Update Customer_Table set  Address='5235' where Name ='B'
