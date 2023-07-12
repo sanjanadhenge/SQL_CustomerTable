@@ -1,5 +1,6 @@
 --UC1
 create database Customer_Info
+Use Customer_Info
 --UC2
 create table Customer_Table(
 ID int Primary Key identity(1,1) ,
@@ -40,18 +41,20 @@ SELECT MAX(Salary) as MAX_Salary from Customer_Table
 SELECT Sum(Salary) as TOTAL_Salary from Customer_Table
 --UC8
 create table ORDER_Table(
-Product_ID int Primary Key identity(1,1) ,
+ID int Primary Key identity(1,1) ,
 Product_Name varchar(20),
 Quantity Bigint,
-Rating int
-)
-Insert into ORDER_Table(Product_Name,Quantity,Rating) values('L',5,4)
-Insert into ORDER_Table(Product_Name,Quantity,Rating) values('M',4,5)
-Insert into ORDER_Table(Product_Name,Quantity,Rating) values('N',5,5)
-Insert into ORDER_Table(Product_Name,Quantity,Rating) values('O',3,2)
-Insert into ORDER_Table(Product_Name,Quantity,Rating) values('P',4,4)
-Insert into ORDER_Table(Product_Name,Quantity,Rating) values('Q',3,1)
-Insert into ORDER_Table(Product_Name,Quantity,Rating) values('R',5,5)
-Insert into ORDER_Table(Product_Name,Quantity,Rating) values('S',5,3)
+Rating int,
+Product_ID int FOREIGN KEY REFERENCES Customer_Table(ID)
+);
+Insert into ORDER_Table(Product_Name,Quantity,Rating,Product_ID) values('L',5,4,'1')
+Insert into ORDER_Table(Product_Name,Quantity,Rating,Product_ID) values('M',4,5,'2')
+Insert into ORDER_Table(Product_Name,Quantity,Rating,Product_ID) values('N',5,5,'3')
+Insert into ORDER_Table(Product_Name,Quantity,Rating,Product_ID) values('O',3,2,'4')
+Insert into ORDER_Table(Product_Name,Quantity,Rating,Product_ID) values('P',4,4,'5')
+Insert into ORDER_Table(Product_Name,Quantity,Rating,Product_ID) values('Q',3,1,'6')
+Insert into ORDER_Table(Product_Name,Quantity,Rating,Product_ID) values('R',5,5,'7')
 --UC9
 select *from ORDER_Table
+Drop table ORDER_Table
+
